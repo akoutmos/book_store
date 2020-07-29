@@ -13,6 +13,8 @@ defmodule BookStore.Application do
       BookStoreWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: BookStore.PubSub},
+      # Start the Book Store Registry
+      BookStore.BookRegistry.child_spec(),
       # Start the Endpoint (http/https)
       BookStoreWeb.Endpoint
       # Start a worker by calling: BookStore.Worker.start_link(arg)

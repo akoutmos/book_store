@@ -17,6 +17,8 @@ defmodule BookStore.Application do
       BookStore.BookRegistry.child_spec(),
       # Start the Book DynamicSupervisor
       BookStore.BookDynamicSupervisor,
+      # Hydrate process state
+      BookStore.BookStateHydrator,
       # Start the Endpoint (http/https)
       BookStoreWeb.Endpoint
       # Start a worker by calling: BookStore.Worker.start_link(arg)

@@ -15,6 +15,8 @@ defmodule BookStore.Application do
       {Phoenix.PubSub, name: BookStore.PubSub},
       # Start the Book Store Registry
       BookStore.BookRegistry.child_spec(),
+      # Start the Book DynamicSupervisor
+      BookStore.BookDynamicSupervisor,
       # Start the Endpoint (http/https)
       BookStoreWeb.Endpoint
       # Start a worker by calling: BookStore.Worker.start_link(arg)
